@@ -1,2 +1,3 @@
-# Rep_1
-Curso de Git e Github
+# Desenvolvimento Web
+---
+* --Objetivos:-- Desenvolver habilidades em HTML, CSS e Java Script.
