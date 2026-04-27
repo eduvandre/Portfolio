@@ -1,16 +1,68 @@
 @charset "UTF-8";
 
+.nome {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+
+  font-size: 2em;
+  border-right: 3px solid black;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: repetir 6s infinite, piscar 0.7s infinite;
+}
+
+@keyframes repetir {
+  0%   { width: 0; }
+  40%  { width: 24ch; } 
+  60%  { width: 24ch; }
+  100% { width: 0; }
+}
+
+@keyframes piscar {
+  50% { border-color: transparent; }
+}
+
+
+
 body {
+    background-color: #011C26;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0%;
+    margin: 0%;
+    height: 100vh;
+}
+
+#fundo {
+    position: relative;
+    height: 500px;
     background-color: #011C26;
     background-image: url(images/notebook.jpg);
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-    color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.350);
+}
+
+h1 {
+    display: inline;
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.350);
+    padding: 1px 8px;
+    border-radius: 5px;
+}
+
+#title {
+    position: relative;
+    top: 60px;
+    text-align: center;
 }
 
 main {
+    position: relative;
+    top: -225px;
     background: linear-gradient(to top, #024959, #011C26);
     padding: 15px;
     width: 80%;
@@ -25,13 +77,13 @@ main {
 }
 
 .logos {
-    width: 80px;
+    width: 75px;
     margin: 5px 20px 5px 0px;
 }
 
 .logos:hover {
-    width: 85px;
-    transition: 0.5s;
+    box-sizing: border-box;
+    border: 2px solid transparent;
 }
 
 main h1 {
